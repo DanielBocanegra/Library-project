@@ -42,6 +42,11 @@ public class Customer implements Person {
 		return lName;
 	}
 
+	public void setID(String nextLine) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 	
 
