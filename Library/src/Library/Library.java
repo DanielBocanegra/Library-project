@@ -93,7 +93,9 @@ public class Library {
 		{
 			if (books[i].getTitle().toLowerCase().equals(t.toLowerCase()))
 				return i;
+			System.out.println("");
 			System.out.println(i);
+			System.out.println("");
 		}
 		return 0;
 		
@@ -105,10 +107,13 @@ public class Library {
 			customer[c] = new Customer();
 			System.out.println("Enter your first name");
 			customer[c].setFName(tInput.nextLine());
+			System.out.println("");
 			System.out.println("Enter your last name");
 			customer[c].setLName(tInput.nextLine());
+			System.out.println("");
 			System.out.println("Enter your ID name");
 			customer[c].setID(tInput.nextLine());
+			System.out.println("");
 		 
 
 		}
@@ -122,10 +127,11 @@ public class Library {
 		{
 			books[bookI].checkOut(1);
 			System.out.println(books[bookI].getTitle() + " is now checked out");
+			System.out.println("");
 		}
 		else
 			System.out.println("The book wasn't found.");
-			
+			System.out.println("");
 		
 	}
 	
@@ -135,7 +141,8 @@ public class Library {
 		if (bookI != lastBook)
 		{
 			books[bookI].CheckIn(1);
-			System.out.println();
+			System.out.println(books[bookI].getTitle() + " is now checked in");
+			System.out.println("");
 		}
 		
 		
@@ -143,7 +150,9 @@ public class Library {
 	
 	private static void addBooks()
 	{
+		System.out.println("");
 		System.out.println("How many books do you want to enter?");
+		System.out.println("");
 		int numBooks = nInput.nextInt();
 		
 		int b = 0;
@@ -159,9 +168,10 @@ public class Library {
 		{
 			System.out.println("Enter a book name");
 			books[i].setTitle(tInput.nextLine());
+			System.out.println("");
 			System.out.println("the Author?");
 			books[i].setAuthor(tInput.nextLine());
-			
+			System.out.println("");
 		}
 		lastBook = b+numBooks;
 
@@ -171,7 +181,9 @@ public class Library {
 	{
 		for (int i = 0; i < lastBook; i++ )
 		{
+			
 			System.out.println(books[i].getTitle() + ", by " + books[i].getAuthor() + " " + books[i].getCheckedOut());
+			System.out.println("");
 		}
 		
 
