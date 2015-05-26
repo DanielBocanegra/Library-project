@@ -66,12 +66,12 @@ public class Book implements Item{
 	}
 @Override
 	public boolean CheckIn(long custID) {
-		if (checkedIn)
-		return false;
-		
-		setCheckedIn(true);
-		setCustomerID(custID);
+		if (!checkedOut)
 		return true;
+		
+		setCheckedOut(false);
+		setCustomerID(custID);
+		return false;
 	}
 	@Override
 	public void setCheckedIn(boolean checked) {
