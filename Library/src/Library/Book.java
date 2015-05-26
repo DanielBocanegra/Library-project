@@ -4,9 +4,15 @@ public class Book implements Item{
 
 	private String callNumber;
 	private boolean checkedOut;
+	private boolean checkedIn;
 	private long custID;
 	private String title;
 	private String author;
+	
+	public Book()
+	{
+		title = "";
+	}
 	
 	public String getTitle()
 	{
@@ -58,7 +64,31 @@ public class Book implements Item{
 	public boolean getCheckedOut() {
 		return checkedOut;
 	}
+@Override
+	public boolean CheckIn(long custID) {
+		if (checkedIn)
+		return false;
+		
+		setCheckedIn(true);
+		setCustomerID(custID);
+		return true;
+	}
+	@Override
+	public void setCheckedIn(boolean checked) {
+		checkedIn = checked;
+		
+	}
 
+	@Override
+	public boolean getCheckedIn() {
+		
+		return checkedIn;
+	}
+
+	
+
+	
+	
 	@Override
 	public void setCustomerID(long customerID) {
 		
@@ -71,5 +101,6 @@ public class Book implements Item{
 		return custID;
 	}
 
+	
 
 }

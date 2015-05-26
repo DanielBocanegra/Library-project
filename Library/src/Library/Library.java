@@ -4,9 +4,12 @@ import java.util.Scanner;
 
 
 public class Library {
-	static int minCustomers = 100;
-	static int maxBooks = 100;
+	static int minCustomers = 10;
+	static int lastCustomer = 0;
+	
+	static int maxBooks = 10;
 	static int lastBook = 0;
+	
 	static Customer[] customer = new Customer[1];
     static Book[] books = new Book[maxBooks];
 	static int answer = 0;
@@ -22,29 +25,31 @@ public class Library {
 		
 		for (int i = 0; i < books.length; i++)
 			books[i] = new Book();
-		
-	/*	for (int i = 0; i < books.length; i++ )
+	
+		//Add the Books
+		addBooks();	
+
+		for (int i = 0; i < books.length; i++ )
 		{
 			System.out.println(books[i].getTitle() + ", by " + books[i].getAuthor());
 		}
 		
 	
 		
-		
+		//Add the Customers
+		addCustomer();	
 		for (int c =0; c < customer.length; c++ )
 		{
-			System.out.println("Would you like to check out a book?");
+			System.out.println();
 			
 		}
-		*/
-		//Add the Books
-		addBooks();
 		
-		//Add the Customers
-		addCustomer();
 		
 		//Menu
 		menu();
+		
+		
+		
 		
 		
 	}
@@ -104,9 +109,10 @@ public class Library {
 			customer[c].setLName(tInput.nextLine());
 			System.out.println("Enter your ID name");
 			customer[c].setID(tInput.nextLine());
-		
+		 
+
 		}
-		return 0;
+		return 0;	
 	} 
 	
 	private static void checkout()
@@ -125,6 +131,12 @@ public class Library {
 	
 	private static void checkin()
 	{
+		int bookI = findBook();
+		if (bookI != lastBook)
+		{
+			books[bookI].CheckIn(1);
+			System.out.println();
+		}
 		
 		
 	}
