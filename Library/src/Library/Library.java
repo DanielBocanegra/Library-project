@@ -34,8 +34,6 @@ public class Library {
 			System.out.println(books[i].getTitle() + ", by " + books[i].getAuthor());
 		}
 		
-	
-		
 		//Add the Customers
 		addCustomer();	
 		for (int c =0; c < customer.length; c++ )
@@ -47,10 +45,6 @@ public class Library {
 		
 		//Menu
 		menu();
-		
-		
-		
-		
 		
 	}
 	
@@ -93,9 +87,7 @@ public class Library {
 		{
 			if (books[i].getTitle().toLowerCase().equals(t.toLowerCase()))
 				return i;
-			System.out.println("");
 			System.out.println(i);
-			System.out.println("");
 		}
 		return 0;
 		
@@ -150,7 +142,7 @@ public class Library {
 	
 	private static void addBooks()
 	{
-		System.out.println("");
+		
 		System.out.println("How many books do you want to enter?");
 		System.out.println("");
 		int numBooks = nInput.nextInt();
@@ -168,10 +160,9 @@ public class Library {
 		{
 			System.out.println("Enter a book name");
 			books[i].setTitle(tInput.nextLine());
-			System.out.println("");
 			System.out.println("the Author?");
 			books[i].setAuthor(tInput.nextLine());
-			System.out.println("");
+			
 		}
 		lastBook = b+numBooks;
 
@@ -181,9 +172,9 @@ public class Library {
 	{
 		for (int i = 0; i < lastBook; i++ )
 		{
-			
-			System.out.println(books[i].getTitle() + ", by " + books[i].getAuthor() + " " + books[i].getCheckedOut());
 			System.out.println("");
+			System.out.println(books[i].getTitle() + ", by " + books[i].getAuthor() + " " + books[i].getCheckedOut());
+			
 		}
 		
 

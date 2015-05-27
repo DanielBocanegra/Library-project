@@ -1,11 +1,16 @@
 package Library;
 
+import java.util.Scanner;
+
 public class Customer implements Person {
 
 	private long iD;
 	private String fName;
 	private String lName;
-
+	private static Scanner yInput = new Scanner(System.in);
+	private static Scanner wInput = new Scanner(System.in);
+	private static Scanner cInput = new Scanner(System.in);
+	
 	@Override
 	public long getID() {
 		// Will return the ID
