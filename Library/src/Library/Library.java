@@ -10,7 +10,7 @@ public class Library {
 	static int maxBooks = 20;
 	static int lastBook = 0;
 	
-	static Customer[] customer = new Customer[1];
+	static Customer[] customer = new Customer[10];
     static Book[] books = new Book[maxBooks];
 	static int answer = 0;
     
@@ -87,9 +87,9 @@ public class Library {
 		{
 			if (books[i].getTitle().toLowerCase().equals(t.toLowerCase()))
 				return i;
-			System.out.println(i);
+			
 		}
-		return 0;
+		return -1;
 		
 	}
 	private static int addCustomer()
@@ -115,7 +115,7 @@ public class Library {
 		int bookI = findBook();
 		if (bookI!=-1)
 		{
-			books[bookI].checkOut(1);
+			books[bookI].checkOut(1);// books[bookI].checkOut(getCust());
 			System.out.println(books[bookI].getTitle() + " is now checked out");
 			
 		}
