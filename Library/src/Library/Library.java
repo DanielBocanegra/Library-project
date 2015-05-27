@@ -7,7 +7,7 @@ public class Library {
 	static int minCustomers = 10;
 	static int lastCustomer = 0;
 	
-	static int maxBooks = 10;
+	static int maxBooks = 20;
 	static int lastBook = 0;
 	
 	static Customer[] customer = new Customer[1];
@@ -54,11 +54,11 @@ public class Library {
 		do
 		{
 			System.out.println("What would you like to do?");
-			System.out.println("1 display books");
-			System.out.println("2 checkout a book");
-			System.out.println("3 checkin a book");
-			System.out.println("4 add a customer");
-			System.out.println("5 add books");
+			System.out.println("1. display books");
+			System.out.println("2. checkout a book");
+			System.out.println("3. checkin a book");
+			System.out.println("4. add a customer");
+			System.out.println("5. add books");
 			answer = nInput.nextInt();
 			
 			if (answer == 1)
@@ -99,15 +99,13 @@ public class Library {
 			customer[c] = new Customer();
 			System.out.println("Enter your first name");
 			customer[c].setFName(tInput.nextLine());
-			System.out.println("");
+			
 			System.out.println("Enter your last name");
 			customer[c].setLName(tInput.nextLine());
-			System.out.println("");
-			System.out.println("Enter your ID name");
+			
+			System.out.println("Enter your ID number");
 			customer[c].setID(tInput.nextLine());
-			System.out.println("");
-		 
-
+			
 		}
 		return 0;	
 	} 
@@ -119,12 +117,11 @@ public class Library {
 		{
 			books[bookI].checkOut(1);
 			System.out.println(books[bookI].getTitle() + " is now checked out");
-			System.out.println("");
+			
 		}
 		else
 			System.out.println("The book wasn't found.");
-			System.out.println("");
-		
+					
 	}
 	
 	private static void checkin()
@@ -144,7 +141,6 @@ public class Library {
 	{
 		
 		System.out.println("How many books do you want to enter?");
-		System.out.println("");
 		int numBooks = nInput.nextInt();
 		
 		int b = 0;
@@ -172,9 +168,9 @@ public class Library {
 	{
 		for (int i = 0; i < lastBook; i++ )
 		{
-			System.out.println("");
-			System.out.println(books[i].getTitle() + ", by " + books[i].getAuthor() + " " + books[i].getCheckedOut());
 			
+			System.out.println(books[i].getTitle() + ", by " + books[i].getAuthor() + " " + books[i].getCheckedOut());
+			System.out.println(" ");
 		}
 		
 

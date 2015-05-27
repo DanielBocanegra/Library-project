@@ -65,7 +65,7 @@ public class Book implements Item{
 		return checkedOut;
 	}
 @Override
-	public boolean CheckIn(long custID) {
+	public boolean CheckIn(long customerID) {
 		if (!checkedOut)
 		return true;
 		
@@ -84,11 +84,6 @@ public class Book implements Item{
 		
 		return checkedIn;
 	}
-
-	
-
-	
-	
 	@Override
 	public void setCustomerID(long customerID) {
 		
