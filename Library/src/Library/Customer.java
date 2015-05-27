@@ -14,7 +14,9 @@ public class Customer implements Person {
 	@Override
 	public long getID() {
 		// Will return the ID
+		long iD = yInput.nextLong();
 		return iD;
+		 
 	}
 	
 	@Override
@@ -27,11 +29,13 @@ public class Customer implements Person {
 	public void setFName(String fname) {
 		// TODO Auto-generated method stub
 		fName = fname;
+		
 	}
 	
 	@Override
 	public String getFName() {
 		// TODO Auto-generated method stub
+		String fName = wInput.nextLine();
 		return fName;
 	}
 	
@@ -39,11 +43,13 @@ public class Customer implements Person {
 	public void setLName(String lname) {
 		// TODO Auto-generated method stub
 		lName = lname;
+
 	}
 	
 	@Override
 	public String getLName() {
 		// TODO Auto-generated method stub
+		String lName = cInput.nextLine();
 		return lName;
 	}
 
